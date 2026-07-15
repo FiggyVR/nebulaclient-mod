@@ -17,8 +17,10 @@ jobs:
         with:
           distribution: temurin
           java-version: 21
-      - run: chmod +x ./gradlew
-      - run: ./gradlew build
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 8.10
+      - run: gradle build
       - uses: softprops/action-gh-release@v2
         with:
           files: build/libs/*.jar
