@@ -1,5 +1,8 @@
 name: Build and release mod
 
+# Push a tag like "v0.1.0" and this builds the jar and attaches it to a
+# GitHub Release. The launcher's ensureNebulaMod() downloads the newest
+# release's .jar asset automatically — see src/main/main.js.
 on:
   push:
     tags:
@@ -19,7 +22,7 @@ jobs:
           java-version: 21
       - uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: 8.14
+          gradle-version: 9.5.0
       - run: gradle build
       - uses: softprops/action-gh-release@v2
         with:
