@@ -1,5 +1,6 @@
 {
   "key.categories.nebulaclient": "NebulaClient",
+  "category.nebulaclient.main": "NebulaClient",
 
   "key.nebulaclient.create_waypoint": "Create Waypoint",
   "key.nebulaclient.forward_view": "Forward View Key",
